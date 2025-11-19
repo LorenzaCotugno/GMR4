@@ -47,6 +47,8 @@ expected.p = function(y, theta, m){
 FF = function(x){1/(1 + exp(-x))}
 
 
+# For categorizing the ordinal variables (sim study):
+
 # Categorize function for having 5 levels
 
 categorize = function(x, ncat){
@@ -96,28 +98,4 @@ categorize = function(x, ncat){
 }
 
 
-#---
-
-# This function iterates through each column of the model's coefficient matrix and
-# collects the names of predictors whose absolute coefficients exceed a set threshold, 
-# grouping them by dimension:
-
-significantP <- function(gmr4.final.model, threshold = 0.001){
-  
-  coefficients <- gmr4.final.model$B
-  if (is.null(rownames(coefficients))){
-    rownames(coefficients) <- paste0("X", 1:nrow(coefficients))
-  }
-  
-  interesting_predictors <- list()
-  
-  
-  for (dim in seq_len(ncol(coefficients))){
-    dim_coefs <- coefficients[, dim]
-    idx_interesting <- which(abs(dim_coefs) > threshold)
-    interesting_predictors[[paste0("Dim", dim)]] <- rownames(coefficients)[idx_interesting]
-  }
-  
-  return(interesting_predictors)
-}
 
