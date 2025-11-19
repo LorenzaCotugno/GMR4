@@ -1,4 +1,4 @@
-# Genereting Uninformative Predictors/Noise
+# Generating Uninformative Predictors/Noise
 
 generateOrthogonalNoise <- function(Y, nPredictors, sd = 0.15) {
   N <- nrow(Y)
@@ -43,5 +43,6 @@ generate_noise <- function(Y, n_num, n_ord, sd = 0.15) {
   X_noise <- cbind(X_num, X_ord)
   return(X_noise)
 }
+
 
 
