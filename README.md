@@ -14,10 +14,10 @@ The following R scripts implement the core methods introduced in the paper:
 
 - **auxiliary.R** – collection of helper functions  
 - **gmr4.R** – main estimation routine for the GMR4 model  
-- **gmr4.start.R** – initialization step for model estimation  
+- **gmr4.start.R** – model estimation with starting values
 - **predict.R** – prediction methods for fitted GMR4 models  
 - **xval.gmr4.R** – cross-validation for tuning and model selection  
-- **xval.start.R** – initialization functions for cross-validation  
+- **xval.start.R** – cross-validation with starting values
 
 ---
 
