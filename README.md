@@ -52,12 +52,4 @@ Scripts for generating all figures used in the paper:
 - **xvalplot.R**  
 - **simplot.R**
 
----
 
-## Citation
-
-If you use this code, please cite the corresponding manuscript:
-
-*(Add citation once available.)*
-
----
