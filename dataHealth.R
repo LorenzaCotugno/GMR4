@@ -267,10 +267,10 @@ Xscale = c(
 out = gmr4( Yn = NULL, Yb = NULL, Yo = YYo, X = X, Xscale = Xscale)
 
 # Validation 
-PE.S1 = xval.start(Yn = NULL, Yb = NULL, Yo = Yo , X = X, Xscale, S = 1, K = 10, repeats = 1, lambda.lasso.seq = seq(0, 200, by = 0.1), lambda.ridge.seq = 0, lambda.glasso.seq = 0)
-PE.S2 = xval.start(Yn = NULL, Yb = NULL, Yo = Yo , X = X, Xscale, S = 2, K = 10, repeats = 1, lambda.lasso.seq = seq(0, 200, by = 0.1), lambda.ridge.seq = 0, lambda.glasso.seq = 0)
-PE.S3 = xval.start(Yn = NULL, Yb = NULL, Yo = Yo , X = X, Xscale, S = 3, K = 10, repeats = 1, lambda.lasso.seq = seq(0, 200, by = 0.1), lambda.ridge.seq = 0, lambda.glasso.seq = 0)
-PE.S4 = xval.start(Yn = NULL, Yb = NULL, Yo = Yo , X = X, Xscale, S = 4, K = 10, repeats = 1, lambda.lasso.seq = seq(0, 200, by = 0.1), lambda.ridge.seq = 0, lambda.glasso.seq = 0)
+PE.S1 = xval.start(Yn = NULL, Yb = NULL, Yo = YYo , X = X, Xscale, S = 1, K = 10, repeats = 1, lambda.lasso.seq = seq(0, 200, by = 0.1), lambda.ridge.seq = 0, lambda.glasso.seq = 0)
+PE.S2 = xval.start(Yn = NULL, Yb = NULL, Yo = YYo , X = X, Xscale, S = 2, K = 10, repeats = 1, lambda.lasso.seq = seq(0, 200, by = 0.1), lambda.ridge.seq = 0, lambda.glasso.seq = 0)
+PE.S3 = xval.start(Yn = NULL, Yb = NULL, Yo = YYo , X = X, Xscale, S = 3, K = 10, repeats = 1, lambda.lasso.seq = seq(0, 200, by = 0.1), lambda.ridge.seq = 0, lambda.glasso.seq = 0)
+PE.S4 = xval.start(Yn = NULL, Yb = NULL, Yo = YYo , X = X, Xscale, S = 4, K = 10, repeats = 1, lambda.lasso.seq = seq(0, 200, by = 0.1), lambda.ridge.seq = 0, lambda.glasso.seq = 0)
 
 # Plot of the validation S1
 summary_valS1 = summary.function(PE.S1, "lasso", 10) 
